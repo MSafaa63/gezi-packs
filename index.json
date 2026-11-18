@@ -1,0 +1,770 @@
+{
+ "generatedAt": "2026-11-18T10:54:42.267Z",
+ "cities": {
+  "paris": {
+   "city": "paris",
+   "version": "2026-11-18",
+   "totalBytes": 66860374,
+   "files": [
+    {
+     "path": "places.json",
+     "bytes": 105281
+    },
+    {
+     "path": "city.json",
+     "bytes": 241860
+    },
+    {
+     "path": "phrases.json",
+     "bytes": 7050
+    },
+    {
+     "path": "map.pmtiles",
+     "bytes": 49292441
+    },
+    {
+     "path": "photos/q243.jpg",
+     "bytes": 338718
+    },
+    {
+     "path": "photos/q19675.jpg",
+     "bytes": 83124
+    },
+    {
+     "path": "photos/q2981.jpg",
+     "bytes": 426959
+    },
+    {
+     "path": "photos/q23402.jpg",
+     "bytes": 193814
+    },
+    {
+     "path": "photos/q550.jpg",
+     "bytes": 249374
+    },
+    {
+     "path": "photos/q193563.jpg",
+     "bytes": 171187
+    },
+    {
+     "path": "photos/q64436.jpg",
+     "bytes": 137095
+    },
+    {
+     "path": "photos/q1865480.jpg",
+     "bytes": 238365
+    },
+    {
+     "path": "photos/q311.jpg",
+     "bytes": 206875
+    },
+    {
+     "path": "photos/q188190.jpg",
+     "bytes": 134456
+    },
+    {
+     "path": "photos/q178065.jpg",
+     "bytes": 165029
+    },
+    {
+     "path": "photos/q187840.jpg",
+     "bytes": 172163
+    },
+    {
+     "path": "photos/q189503.jpg",
+     "bytes": 257655
+    },
+    {
+     "path": "photos/q193582.jpg",
+     "bytes": 183903
+    },
+    {
+     "path": "photos/q188856.jpg",
+     "bytes": 139301
+    },
+    {
+     "path": "photos/q28785.jpg",
+     "bytes": 309433
+    },
+    {
+     "path": "photos/q193193.jpg",
+     "bytes": 293603
+    },
+    {
+     "path": "photos/q188977.jpg",
+     "bytes": 337803
+    },
+    {
+     "path": "photos/q1538826.jpg",
+     "bytes": 169735
+    },
+    {
+     "path": "photos/q329948.jpg",
+     "bytes": 103358
+    },
+    {
+     "path": "photos/q457318.jpg",
+     "bytes": 126861
+    },
+    {
+     "path": "photos/q323767.jpg",
+     "bytes": 121011
+    },
+    {
+     "path": "photos/q329852.jpg",
+     "bytes": 164584
+    },
+    {
+     "path": "photos/q820892.jpg",
+     "bytes": 170079
+    },
+    {
+     "path": "photos/q330564.jpg",
+     "bytes": 186227
+    },
+    {
+     "path": "photos/q392564.jpg",
+     "bytes": 172299
+    },
+    {
+     "path": "photos/q28924.jpg",
+     "bytes": 742293
+    },
+    {
+     "path": "photos/q138101.jpg",
+     "bytes": 135318
+    },
+    {
+     "path": "photos/q818517.jpg",
+     "bytes": 191000
+    },
+    {
+     "path": "photos/q271639.jpg",
+     "bytes": 335616
+    },
+    {
+     "path": "photos/q272208.jpg",
+     "bytes": 277138
+    },
+    {
+     "path": "photos/q663673.jpg",
+     "bytes": 226977
+    },
+    {
+     "path": "photos/q390418.jpg",
+     "bytes": 140484
+    },
+    {
+     "path": "photos/q857276.jpg",
+     "bytes": 176439
+    },
+    {
+     "path": "photos/q1327886.jpg",
+     "bytes": 197516
+    },
+    {
+     "path": "photos/q211034.jpg",
+     "bytes": 220150
+    },
+    {
+     "path": "photos/q743206.jpg",
+     "bytes": 220696
+    },
+    {
+     "path": "photos/q640968.jpg",
+     "bytes": 141109
+    },
+    {
+     "path": "photos/q650519.jpg",
+     "bytes": 244119
+    },
+    {
+     "path": "photos/q1094338.jpg",
+     "bytes": 198186
+    },
+    {
+     "path": "photos/q217925.jpg",
+     "bytes": 696483
+    },
+    {
+     "path": "photos/q746647.jpg",
+     "bytes": 320516
+    },
+    {
+     "path": "photos/q3075489.jpg",
+     "bytes": 226934
+    },
+    {
+     "path": "photos/q167863.jpg",
+     "bytes": 532913
+    },
+    {
+     "path": "photos/q860994.jpg",
+     "bytes": 153653
+    },
+    {
+     "path": "photos/q898629.jpg",
+     "bytes": 204165
+    },
+    {
+     "path": "photos/q190063.jpg",
+     "bytes": 194871
+    },
+    {
+     "path": "photos/q726781.jpg",
+     "bytes": 262811
+    },
+    {
+     "path": "photos/q730948.jpg",
+     "bytes": 255746
+    },
+    {
+     "path": "photos/q13360213.jpg",
+     "bytes": 202634
+    },
+    {
+     "path": "photos/q334186.jpg",
+     "bytes": 312654
+    },
+    {
+     "path": "photos/q749573.jpg",
+     "bytes": 189084
+    },
+    {
+     "path": "photos/q1414059.jpg",
+     "bytes": 287618
+    },
+    {
+     "path": "photos/q295844.jpg",
+     "bytes": 290230
+    },
+    {
+     "path": "photos/q526595.jpg",
+     "bytes": 341665
+    },
+    {
+     "path": "photos/q1538929.jpg",
+     "bytes": 215965
+    },
+    {
+     "path": "photos/q292258.jpg",
+     "bytes": 435438
+    },
+    {
+     "path": "photos/q643520.jpg",
+     "bytes": 810476
+    },
+    {
+     "path": "photos/q1025686.jpg",
+     "bytes": 293626
+    },
+    {
+     "path": "photos/q321621.jpg",
+     "bytes": 288274
+    },
+    {
+     "path": "photos/q3176233.jpg",
+     "bytes": 254336
+    },
+    {
+     "path": "photos/q1018039.jpg",
+     "bytes": 233531
+    },
+    {
+     "path": "photos/q141747.jpg",
+     "bytes": 278939
+    },
+    {
+     "path": "photos/q6455533.jpg",
+     "bytes": 273224
+    },
+    {
+     "path": "photos/q1235554.jpg",
+     "bytes": 180429
+    },
+    {
+     "path": "photos/q751293.jpg",
+     "bytes": 259346
+    },
+    {
+     "path": "photos/q1025695.jpg",
+     "bytes": 243950
+    },
+    {
+     "path": "photos/q1338260.jpg",
+     "bytes": 274179
+    }
+   ]
+  },
+  "berlin": {
+   "city": "berlin",
+   "version": "2026-11-18",
+   "totalBytes": 69379909,
+   "files": [
+    {
+     "path": "places.json",
+     "bytes": 90976
+    },
+    {
+     "path": "city.json",
+     "bytes": 112335
+    },
+    {
+     "path": "phrases.json",
+     "bytes": 7050
+    },
+    {
+     "path": "map.pmtiles",
+     "bytes": 54826694
+    },
+    {
+     "path": "photos/q82425.jpg",
+     "bytes": 132614
+    },
+    {
+     "path": "photos/q151897.jpg",
+     "bytes": 150844
+    },
+    {
+     "path": "photos/q151374.jpg",
+     "bytes": 106685
+    },
+    {
+     "path": "photos/q157298.jpg",
+     "bytes": 230097
+    },
+    {
+     "path": "photos/q156722.jpg",
+     "bytes": 212207
+    },
+    {
+     "path": "photos/q151356.jpg",
+     "bytes": 243473
+    },
+    {
+     "path": "photos/q154563.jpg",
+     "bytes": 270199
+    },
+    {
+     "path": "photos/q157316.jpg",
+     "bytes": 199828
+    },
+    {
+     "path": "photos/q154828.jpg",
+     "bytes": 223755
+    },
+    {
+     "path": "photos/q154987.jpg",
+     "bytes": 1800325
+    },
+    {
+     "path": "photos/q157825.jpg",
+     "bytes": 169642
+    },
+    {
+     "path": "photos/q154996.jpg",
+     "bytes": 89889
+    },
+    {
+     "path": "photos/q160700.jpg",
+     "bytes": 175695
+    },
+    {
+     "path": "photos/q165631.jpg",
+     "bytes": 72284
+    },
+    {
+     "path": "photos/q155210.jpg",
+     "bytes": 145366
+    },
+    {
+     "path": "photos/q157003.jpg",
+     "bytes": 122758
+    },
+    {
+     "path": "photos/q162111.jpg",
+     "bytes": 201414
+    },
+    {
+     "path": "photos/q233098.jpg",
+     "bytes": 322492
+    },
+    {
+     "path": "photos/q48441.jpg",
+     "bytes": 230330
+    },
+    {
+     "path": "photos/q246474.jpg",
+     "bytes": 367118
+    },
+    {
+     "path": "photos/q152252.jpg",
+     "bytes": 553511
+    },
+    {
+     "path": "photos/q679101.jpg",
+     "bytes": 137408
+    },
+    {
+     "path": "photos/q156716.jpg",
+     "bytes": 202649
+    },
+    {
+     "path": "photos/q688335.jpg",
+     "bytes": 216664
+    },
+    {
+     "path": "photos/q679052.jpg",
+     "bytes": 266321
+    },
+    {
+     "path": "photos/q315694.jpg",
+     "bytes": 350664
+    },
+    {
+     "path": "photos/q317027.jpg",
+     "bytes": 114273
+    },
+    {
+     "path": "photos/q706530.jpg",
+     "bytes": 185975
+    },
+    {
+     "path": "photos/q163255.jpg",
+     "bytes": 224938
+    },
+    {
+     "path": "photos/q695082.jpg",
+     "bytes": 114741
+    },
+    {
+     "path": "photos/q152341.jpg",
+     "bytes": 160441
+    },
+    {
+     "path": "photos/q315644.jpg",
+     "bytes": 176377
+    },
+    {
+     "path": "photos/q160899.jpg",
+     "bytes": 467933
+    },
+    {
+     "path": "photos/q819081.jpg",
+     "bytes": 305806
+    },
+    {
+     "path": "photos/q641108.jpg",
+     "bytes": 519754
+    },
+    {
+     "path": "photos/q32660126.jpg",
+     "bytes": 111249
+    },
+    {
+     "path": "photos/q313746.jpg",
+     "bytes": 225281
+    },
+    {
+     "path": "photos/q564884.jpg",
+     "bytes": 52626
+    },
+    {
+     "path": "photos/q186173.jpg",
+     "bytes": 302605
+    },
+    {
+     "path": "photos/q700222.jpg",
+     "bytes": 273469
+    },
+    {
+     "path": "photos/q702771.jpg",
+     "bytes": 226139
+    },
+    {
+     "path": "photos/q699724.jpg",
+     "bytes": 312344
+    },
+    {
+     "path": "photos/q736425.jpg",
+     "bytes": 275893
+    },
+    {
+     "path": "photos/q136975.jpg",
+     "bytes": 197227
+    },
+    {
+     "path": "photos/q190494.jpg",
+     "bytes": 277670
+    },
+    {
+     "path": "photos/q672806.jpg",
+     "bytes": 312629
+    },
+    {
+     "path": "photos/q170103.jpg",
+     "bytes": 289150
+    },
+    {
+     "path": "photos/q694020.jpg",
+     "bytes": 398621
+    },
+    {
+     "path": "photos/q160272.jpg",
+     "bytes": 238159
+    },
+    {
+     "path": "photos/q641741.jpg",
+     "bytes": 180496
+    },
+    {
+     "path": "photos/q477251.jpg",
+     "bytes": 280247
+    },
+    {
+     "path": "photos/q523663.jpg",
+     "bytes": 264640
+    },
+    {
+     "path": "photos/q879342.jpg",
+     "bytes": 202641
+    },
+    {
+     "path": "photos/q1386375.jpg",
+     "bytes": 457298
+    }
+   ]
+  },
+  "istanbul": {
+   "city": "istanbul",
+   "version": "2026-11-18",
+   "totalBytes": 43309174,
+   "files": [
+    {
+     "path": "places.json",
+     "bytes": 87369
+    },
+    {
+     "path": "city.json",
+     "bytes": 520976
+    },
+    {
+     "path": "phrases.json",
+     "bytes": 7050
+    },
+    {
+     "path": "map.pmtiles",
+     "bytes": 28440243
+    },
+    {
+     "path": "photos/q12506.jpg",
+     "bytes": 188479
+    },
+    {
+     "path": "photos/q80541.jpg",
+     "bytes": 133560
+    },
+    {
+     "path": "photos/q170495.jpg",
+     "bytes": 122701
+    },
+    {
+     "path": "photos/q178643.jpg",
+     "bytes": 305997
+    },
+    {
+     "path": "photos/q211004.jpg",
+     "bytes": 159989
+    },
+    {
+     "path": "photos/q849489.jpg",
+     "bytes": 250157
+    },
+    {
+     "path": "photos/q274141.jpg",
+     "bytes": 171181
+    },
+    {
+     "path": "photos/q197094.jpg",
+     "bytes": 198826
+    },
+    {
+     "path": "photos/q216511.jpg",
+     "bytes": 436243
+    },
+    {
+     "path": "photos/q756189.jpg",
+     "bytes": 385355
+    },
+    {
+     "path": "photos/q636978.jpg",
+     "bytes": 165223
+    },
+    {
+     "path": "photos/q794349.jpg",
+     "bytes": 213382
+    },
+    {
+     "path": "photos/q911734.jpg",
+     "bytes": 225754
+    },
+    {
+     "path": "photos/q1137511.jpg",
+     "bytes": 232079
+    },
+    {
+     "path": "photos/q4484.jpg",
+     "bytes": 119550
+    },
+    {
+     "path": "photos/q911720.jpg",
+     "bytes": 152720
+    },
+    {
+     "path": "photos/q1144576.jpg",
+     "bytes": 159748
+    },
+    {
+     "path": "photos/q736072.jpg",
+     "bytes": 1118693
+    },
+    {
+     "path": "photos/q1430090.jpg",
+     "bytes": 173441
+    },
+    {
+     "path": "photos/q81523.jpg",
+     "bytes": 304681
+    },
+    {
+     "path": "photos/q81650.jpg",
+     "bytes": 236844
+    },
+    {
+     "path": "photos/q15961492.jpg",
+     "bytes": 321016
+    },
+    {
+     "path": "photos/q505954.jpg",
+     "bytes": 341814
+    },
+    {
+     "path": "photos/q1420984.jpg",
+     "bytes": 258705
+    },
+    {
+     "path": "photos/q1662392.jpg",
+     "bytes": 152811
+    },
+    {
+     "path": "photos/q956677.jpg",
+     "bytes": 245259
+    },
+    {
+     "path": "photos/q1463961.jpg",
+     "bytes": 104972
+    },
+    {
+     "path": "photos/q1472490.jpg",
+     "bytes": 248264
+    },
+    {
+     "path": "photos/q588892.jpg",
+     "bytes": 432468
+    },
+    {
+     "path": "photos/q644677.jpg",
+     "bytes": 202421
+    },
+    {
+     "path": "photos/q1755906.jpg",
+     "bytes": 212574
+    },
+    {
+     "path": "photos/q1085952.jpg",
+     "bytes": 270783
+    },
+    {
+     "path": "photos/q642478.jpg",
+     "bytes": 206855
+    },
+    {
+     "path": "photos/q3395851.jpg",
+     "bytes": 199240
+    },
+    {
+     "path": "photos/q1059699.jpg",
+     "bytes": 163836
+    },
+    {
+     "path": "photos/q251601.jpg",
+     "bytes": 271037
+    },
+    {
+     "path": "photos/q1095321.jpg",
+     "bytes": 196410
+    },
+    {
+     "path": "photos/q12808583.jpg",
+     "bytes": 180275
+    },
+    {
+     "path": "photos/q2743371.jpg",
+     "bytes": 332226
+    },
+    {
+     "path": "photos/q107475211.jpg",
+     "bytes": 165784
+    },
+    {
+     "path": "photos/q853184.jpg",
+     "bytes": 186222
+    },
+    {
+     "path": "photos/q2555555.jpg",
+     "bytes": 488279
+    },
+    {
+     "path": "photos/q2921300.jpg",
+     "bytes": 159925
+    },
+    {
+     "path": "photos/q5185642.jpg",
+     "bytes": 379379
+    },
+    {
+     "path": "photos/q2414579.jpg",
+     "bytes": 135941
+    },
+    {
+     "path": "photos/q1187380.jpg",
+     "bytes": 206505
+    },
+    {
+     "path": "photos/q1247271.jpg",
+     "bytes": 838494
+    },
+    {
+     "path": "photos/q4845769.jpg",
+     "bytes": 755766
+    },
+    {
+     "path": "photos/q2073624.jpg",
+     "bytes": 202150
+    },
+    {
+     "path": "photos/q4811146.jpg",
+     "bytes": 246839
+    },
+    {
+     "path": "photos/q12812452.jpg",
+     "bytes": 236595
+    },
+    {
+     "path": "photos/q124259402.jpg",
+     "bytes": 456088
+    }
+   ]
+  }
+ }
+}
