@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gezi – Route</title>
+<!--
+  Paylaşılan rota önizlemesi (uygulaması olmayanlar için).
+  Rota bilgisi linkin # kısmındadır → tarayıcıdan sunucuya HİÇ gönderilmez. Çerez, takip, dış script YOK.
+  Mekân adları aynı sitedeki şehir paketinden (places.json) okunur.
+-->
+<style>
+  :root { --bg:#f6f5f2; --card:#fff; --text:#1a1a1a; --muted:#6b6b6b; --primary:#0e7c66; --border:#dedbd4; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1112; --card:#1a1d1f; --text:#f2f2f2; --muted:#a0a4a8; --primary:#2bb596; --border:#33383c; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .day { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:14px 0; }
+  .day h2 { font-size:17px; margin:0 0 6px; }
+  ol { margin:0; padding-inline-start: 22px; }
+  .btn { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; font-weight:600;
+         padding:14px; border-radius:999px; margin:20px 0 8px; }
+  footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
+  [dir=rtl] ol { padding-inline-start: 22px; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Gezi</h1>
+  <p class="muted" id="meta"></p>
+  <div id="days"></div>
+  <a class="btn" id="open" href="#">Open in the app</a>
+  <p class="muted" id="note"></p>
+  <footer id="foot">Places: Wikidata (CC0), © OpenStreetMap contributors. No cookies, no tracking.</footer>
+</main>
+<script>
+(function () {
+  var L = { tr:{open:'Uygulamada aç',days:'gün',day:'gün',invalid:'Bu link geçersiz veya bozuk.',server:'Bu paylaşım uygulamada açılabilir.',note:'Uygulama yüklüyse yukarıdaki buton rotayı açar ve kendi rotalarına kaydetmeni sağlar.',pace:{relaxed:'Sakin',normal:'Normal',intense:'Yoğun'}},
+            de:{open:'In der App öffnen',days:'Tage',day:'Tag',invalid:'Dieser Link ist ungültig.',server:'Diese Freigabe kann in der App geöffnet werden.',note:'Ist die App installiert, öffnet der Button die Route und du kannst sie speichern.',pace:{relaxed:'Entspannt',normal:'Normal',intense:'Intensiv'}},
+            en:{open:'Open in the app',days:'days',day:'Day',invalid:'This link is invalid or broken.',server:'This share can be opened in the app.',note:'If the app is installed, the button opens the route so you can save it.',pace:{relaxed:'Relaxed',normal:'Normal',intense:'Packed'}},
+            ar:{open:'افتح في التطبيق',days:'أيام',day:'اليوم',invalid:'هذا الرابط غير صالح.',server:'يمكن فتح هذه المشاركة في التطبيق.',note:'إذا كان التطبيق مثبتًا، يفتح الزر المسار لتتمكن من حفظه.',pace:{relaxed:'هادئة',normal:'عادية',intense:'مكثفة'}} };
+  var lang = (navigator.language || 'en').slice(0, 2); if (!L[lang]) lang = 'en';
+  var T = L[lang];
+  document.documentElement.lang = lang; if (lang === 'ar') document.documentElement.dir = 'rtl';
+  var $ = function (id) { return document.getElementById(id); };
+  $('open').textContent = T.open; $('note').textContent = T.note;
+
+  var PACES = ['relaxed','normal','intense'];
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+
+  // Sunucu kodlu paylaşım (?s=...) — sadece uygulamada açılır
+  var q = new URLSearchParams(location.search).get('s');
+  if (q && /^[a-f0-9]{16}$/.test(q)) {
+    $('meta').textContent = T.server; $('open').href = 'gezi://share?s=' + q; return;
+  }
+
+  var raw = location.hash.slice(1);
+  var p; try { p = decodeURIComponent(raw).split('.'); } catch (e) { p = []; }
+  if (p[0] !== 'v1' || p.length < 7 || !/^[a-z0-9-]{1,40}$/.test(p[1]) || !/^\d{8}$/.test(p[2])) {
+    $('meta').textContent = T.invalid; $('open').style.display = 'none'; return;
+  }
+  var city = p[1], date = p[2], pace = PACES[+p[3]] || 'normal';
+  var days = (p[6] || '').split('|').map(function (d) { return d ? d.split(',') : []; });
+  $('open').href = 'gezi://share?d=' + encodeURIComponent(raw);
+  var start = new Date(Date.UTC(+date.slice(0,4), +date.slice(4,6) - 1, +date.slice(6,8)));
+  var fmt = function (i) { var d = new Date(start.getTime() + i * 864e5);
+    try { return d.toLocaleDateString(lang, { weekday:'short', day:'numeric', month:'short', timeZone:'UTC' }); } catch (e) { return d.toISOString().slice(0,10); } };
+
+  fetch('../' + city + '/places.json').then(function (r) { return r.json(); }).then(function (places) {
+    var byId = {}; places.forEach(function (x) { byId[x.id] = x; });
+    var name = function (s) {
+      var id = s.charAt(0) === '~' ? city + '-' + s.slice(1) : city + '-q' + s; var x = byId[id];
+      return x ? (x.name[lang] || x.name.en || x.name.local || id) : null; };
+    $('title').textContent = city.charAt(0).toUpperCase() + city.slice(1);
+    $('meta').textContent = days.length + ' ' + T.days + ' · ' + fmt(0) + ' · ' + T.pace[pace];
+    $('days').innerHTML = days.map(function (ids, i) {
+      var items = ids.map(name).filter(Boolean).map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('');
+      return '<section class="day"><h2>' + esc(T.day) + ' ' + (i + 1) + ' · ' + esc(fmt(i)) + '</h2><ol>' + items + '</ol></section>';
+    }).join('');
+  }).catch(function () { $('meta').textContent = days.length + ' ' + T.days; });
+})();
+</script>
+</body>
+</html>
